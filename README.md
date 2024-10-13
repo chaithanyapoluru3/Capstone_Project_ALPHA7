@@ -3,7 +3,7 @@
 # Performance Optimization of EE Architecture For Software Defined Vehicles
 
 # Introduction
-In embedded systems, communication between devices is crucial for data transfer, synchronization, and control. This project focuses on three widely-used communication protocols: CAN (Controller Area Network), I2C (Inter-Integrated Circuit), and SPI (Serial Peripheral Interface).   
+In embedded systems, communication between devices is crucial for data transfer, synchronization, and control. This project focuses on three widely-used communication protocols: CAN (Controller Area Network), I2C (Inter-Integrated Circuit), and SPI (Serial Peripheral Interface). 
 <br> CAN is designed for real-time data transfer in noisy environments, widely employed in automotive and industrial systems. I2C, a simple two-wire protocol, facilitates low-speed communication between a master and multiple slave devices, making it ideal for embedded systems like sensors and displays. SPI, a high-speed full-duplex protocol, is used for efficient, low-latency communication between a master and peripherals like memory devices and sensors. 
                          <br> Together, these protocols form the backbone of communication in modern embedded systems, enabling seamless data exchange across various applications.
 
@@ -62,13 +62,13 @@ SPI is a common communication protocol used by many different devices. For examp
 ## PROTOCOL 3: CAN (controller area network)
 Controller Area Network, in short CAN protocol is a serial communication protocol which provides efficient support to mainly automotive real time control systems with a very high level of security, error detection and correction. CAN data frame can be defined as in the fig below. It consists of start of frame (SOF), arbitration field, control field, data field, CRC field, ACK field and end of frame(EOF).
 ![image](https://github.com/user-attachments/assets/1f8e6abc-947f-4e16-99ca-238565b05f8a)
-•	Transmission of a data frame begins with the start bit (Start of Frame — SOF). It is transmitted by the sender as a dominant level which produces a signal edge from the previous recessive (bus idle) level which is used to synchronize the entire network.
-•	 In order for the receivers not to lose synchronism to the sender during transmission of the frame, they compare all recessive-to-dominant signal edges with their preset bit timing. In case of deviation, receivers re-synchronize by the amount of the relevant phase error (re-synchronization).
-•	Following the SOF is the identifier (ID). This sets the priority of the data frame, and together with the acceptance filtering it provides for sender-receiver relations in the CAN network that are defined in the communication matrix. Next comes the RTR bit (Remote Transmission Request). It is used by the sender to inform receivers of the frame type (data frame). A dominant RTR bit indicates a data frame.
-•	The IDE bit (Identifier Extension bit) which follows serves to distinguish between standard format and extended format. In standard format the identifier has 11 bits, and in extended format 29 bits. The figure “Data Frame in Standard and Extended Format” is available to study the two formats.
-•	The DLC (Data Length Code) communicates the number of payload bytes to the receivers. The payload bytes are transported in the data field. A maximum of eight bytes can be transported in one data frame.
-•	The payload is protected by a checksum using a cyclic redundancy check (CRC) which is ended by a delimiter bit. Based on the results of the CRC, the receivers acknowledge positively or negatively in the ACK slot (acknowledgement) which also is followed by a delimiter bit.
-•	After this the transmission of a data frame is terminated by seven recessive bits (End Of Frame — EOF).
+<br> •	Transmission of a data frame begins with the start bit (Start of Frame — SOF). It is transmitted by the sender as a dominant level which produces a signal edge from the previous recessive (bus idle) level which is used to synchronize the entire network.
+<br> •	 In order for the receivers not to lose synchronism to the sender during transmission of the frame, they compare all recessive-to-dominant signal edges with their preset bit timing. In case of deviation, receivers re-synchronize by the amount of the relevant phase error (re-synchronization).
+<br> •	Following the SOF is the identifier (ID). This sets the priority of the data frame, and together with the acceptance filtering it provides for sender-receiver relations in the CAN network that are defined in the communication matrix. Next comes the RTR bit (Remote Transmission Request). It is used by the sender to inform receivers of the frame type (data frame). A dominant RTR bit indicates a data frame.
+<br> •	The IDE bit (Identifier Extension bit) which follows serves to distinguish between standard format and extended format. In standard format the identifier has 11 bits, and in extended format 29 bits. The figure “Data Frame in Standard and Extended Format” is available to study the two formats.
+<br> •	The DLC (Data Length Code) communicates the number of payload bytes to the receivers. The payload bytes are transported in the data field. A maximum of eight bytes can be transported in one data frame.
+<br> •	The payload is protected by a checksum using a cyclic redundancy check (CRC) which is ended by a delimiter bit. Based on the results of the CRC, the receivers acknowledge positively or negatively in the ACK slot (acknowledgement) which also is followed by a delimiter bit.
+<br> •	After this the transmission of a data frame is terminated by seven recessive bits (End Of Frame — EOF).
 
 
 
