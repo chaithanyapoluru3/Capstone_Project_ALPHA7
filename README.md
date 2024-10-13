@@ -3,14 +3,14 @@
 # Performance Optimization of EE Architecture For Software Defined Vehicles
 
 # Introduction
-In embedded systems, communication between devices is crucial for data transfer, synchronization, and control. This project focuses on three widely-used communication protocols: CAN (Controller Area Network), I2C (Inter-Integrated Circuit), and SPI (Serial Peripheral Interface). 
-<br> CAN is designed for real-time data transfer in noisy environments, widely employed in automotive and industrial systems. I2C, a simple two-wire protocol, facilitates low-speed communication between a master and multiple slave devices, making it ideal for embedded systems like sensors and displays. SPI, a high-speed full-duplex protocol, is used for efficient, low-latency communication between a master and peripherals like memory devices and sensors. 
+In embedded systems, communication between devices is crucial for data transfer, synchronization, and control. This project focuses on three widely-used communication protocols: CAN (Controller Area Network), I2C (Inter-Integrated Circuit), and SPI (Serial Peripheral Interface).
+ <br> CAN is designed for real-time data transfer in noisy environments, widely employed in automotive and industrial systems. I2C, a simple two-wire protocol, facilitates low-speed communication between a master and multiple slave devices, making it ideal for embedded systems like sensors and displays. SPI, a high-speed full-duplex protocol, is used for efficient, low-latency communication between a master and peripherals like memory devices and sensors. 
                          <br> Together, these protocols form the backbone of communication in modern embedded systems, enabling seamless data exchange across various applications.
 
 
 # Overview of the problem statement
   The increasing complexity of embedded systems in fields like automotive, industrial automation, and consumer electronics demands reliable, efficient, and real-time communication between multiple devices. Systems require communication protocols that can handle various data transmission needs, from high-speed, low-latency operations to robust, fault-tolerant interactions in noisy environments.
-   <br>This project addresses the challenge of designing, simulating, and validating three key communication protocols—CAN, I2C, and SPI—using Verilog. Each protocol has its own strengths and specific use cases, but integrating and understanding their functionality through simulations provides crucial insights into their behavior and performance in real world applications.
+   <br> This project addresses the challenge of designing, simulating, and validating three key communication protocols—CAN, I2C, and SPI—using Verilog. Each protocol has its own strengths and specific use cases, but integrating and understanding their functionality through simulations provides crucial insights into their behavior and performance in real world applications.
 
                         
 
@@ -21,7 +21,7 @@ The methodology involves designing the CAN, I2C, and SPI protocols in Verilog, f
 ## I2C (Inter Integrated Circuit)
 I2C stands for Inter-Integrated Circuit. It is a bus interface connection protocol incorporated into devices for serial communication. It was originally designed by Philips Semiconductor in 1982. Recently, it is a widely used protocol for short-distance communication. It is also known as Two Wired Interface (TWI).
 ### <br>Working of I2C Communication Protocol:
-<br>•	It uses only 2 bi-directional open-drain lines for data communication called SDA and SCL. Both these lines are pulled high.
+<br> •	It uses only 2 bi-directional open-drain lines for data communication called SDA and SCL. Both these lines are pulled high.
 •	Serial Data (SDA) – Transfer of data takes place through this pin.
 •	Serial Clock (SCL) – It carries the clock signal.
 •	I2C operates in 2 modes –
@@ -35,7 +35,7 @@ I2C stands for Inter-Integrated Circuit. It is a bus interface connection protoc
                                                         Slave Address – 8 bit
                                                          Acknowledge – 1 bit
           <br> ![image](https://github.com/user-attachments/assets/f8fe90ad-27fc-498f-a6b8-1a8f69e459f2)
-          <br>With I2C, data is transferred in messages. Messages are broken up into frames of data. Each message has an address frame that contains the binary address of the slave, and one or more data frames that contain the data being transmitted. The message also includes start and stop conditions, read/write bits, and ACK/NACK bits between each data frame:
+          <br> With I2C, data is transferred in messages. Messages are broken up into frames of data. Each message has an address frame that contains the binary address of the slave, and one or more data frames that contain the data being transmitted. The message also includes start and stop conditions, read/write bits, and ACK/NACK bits between each data frame:
  <br> Start Condition: The SDA line switches from a high voltage level to a low voltage level    before the SCL line switches from high to low.
 <br> Stop Condition: The SDA line switches from a low voltage level to a high voltage level after the SCL line switches from low to high.
 <br> Address Frame: A 7or10 bit sequence unique to each slave that identifies the slave when the master wants to talk to it.
@@ -62,6 +62,7 @@ SPI is a common communication protocol used by many different devices. For examp
 ## PROTOCOL 3: CAN (controller area network)
 Controller Area Network, in short CAN protocol is a serial communication protocol which provides efficient support to mainly automotive real time control systems with a very high level of security, error detection and correction. CAN data frame can be defined as in the fig below. It consists of start of frame (SOF), arbitration field, control field, data field, CRC field, ACK field and end of frame(EOF).
 ![image](https://github.com/user-attachments/assets/1f8e6abc-947f-4e16-99ca-238565b05f8a)
+### Working
 <br> •	Transmission of a data frame begins with the start bit (Start of Frame — SOF). It is transmitted by the sender as a dominant level which produces a signal edge from the previous recessive (bus idle) level which is used to synchronize the entire network.
 <br> •	 In order for the receivers not to lose synchronism to the sender during transmission of the frame, they compare all recessive-to-dominant signal edges with their preset bit timing. In case of deviation, receivers re-synchronize by the amount of the relevant phase error (re-synchronization).
 <br> •	Following the SOF is the identifier (ID). This sets the priority of the data frame, and together with the acceptance filtering it provides for sender-receiver relations in the CAN network that are defined in the communication matrix. Next comes the RTR bit (Remote Transmission Request). It is used by the sender to inform receivers of the frame type (data frame). A dominant RTR bit indicates a data frame.
