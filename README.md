@@ -36,11 +36,11 @@ I2C stands for Inter-Integrated Circuit. It is a bus interface connection protoc
                                                          Acknowledge – 1 bit
           <br> ![image](https://github.com/user-attachments/assets/f8fe90ad-27fc-498f-a6b8-1a8f69e459f2)
           <br> With I2C, data is transferred in messages. Messages are broken up into frames of data. Each message has an address frame that contains the binary address of the slave, and one or more data frames that contain the data being transmitted. The message also includes start and stop conditions, read/write bits, and ACK/NACK bits between each data frame:
- <br> Start Condition: The SDA line switches from a high voltage level to a low voltage level    before the SCL line switches from high to low.
-<br> Stop Condition: The SDA line switches from a low voltage level to a high voltage level after the SCL line switches from low to high.
-<br> Address Frame: A 7or10 bit sequence unique to each slave that identifies the slave when the master wants to talk to it.
-<br> Read/Write Bit: A single bit specifying whether the master is sending data to the slave (low voltage level) or requesting data from it (high voltage level).
-<br> ACK/NACK Bit: Each frame in a message is followed by an acknowledge/no-acknowledge bit. If an address frame or data frame was successfully received, an ACK bit is returned to the sender from the receiving device.
+ <br> **Start Condition** : The SDA line switches from a high voltage level to a low voltage level    before the SCL line switches from high to low.
+<br> **Stop Condition** : The SDA line switches from a low voltage level to a high voltage level after the SCL line switches from low to high.
+<br> **Address Frame** : A 7or10 bit sequence unique to each slave that identifies the slave when the master wants to talk to it.
+<br> **Read/Write Bit** : A single bit specifying whether the master is sending data to the slave (low voltage level) or requesting data from it (high voltage level).
+<br> **ACK/NACK Bit** : Each frame in a message is followed by an acknowledge/no-acknowledge bit. If an address frame or data frame was successfully received, an ACK bit is returned to the sender from the receiving device.
 
 ## PROTOCOL 2:  SPI (serial peripheral interface)
 SPI is a common communication protocol used by many different devices. For example, SD card reader modules, RFID card reader modules, and 2.4 GHz wireless transmitter/receivers all use SPI to communicate with microcontrollers.
@@ -52,9 +52,9 @@ SPI is a common communication protocol used by many different devices. For examp
    <br> •	SCLK (Clock) – Line for the clock signal.
    <br> •	SS/CS (Slave Select/Chip Select) – Line for the master to select which slave to send data to.
    ### Working
-   <br> Slave Select
+   <br> **Slave Select**
              <br> The master can choose which slave it wants to talk to by setting the slave’s CS/SS line to a low voltage level. In the idle, non-transmitting state, the slave select line is kept at a high voltage level. Multiple CS/SS pins may be available on the master, which allows for multiple slaves to be wired in parallel. If only one CS/SS pin is present, multiple slaves can be wired to the master by daisy-chaining.
-             <br> MOSI and MISO
+             <br> **MOSI and MISO**
 <br> •	The master sends data to the slave bit by bit, in serial through the MOSI line. The slave receives the data sent from the master at the MOSI pin. Data sent from the master to the slave is usually sent with the most significant bit first.
 <br> •	The slave can also send data back to the master through the MISO line in serial. The data sent from the slave back to the master is usually sent with the least significant bit first.
 
