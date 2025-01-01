@@ -1,4 +1,4 @@
-' `timescale 1ns / 1ps
+<pre> `timescale 1ns / 1ps
 
 ////////////////////////////////////////////////////////////////////////////////
 // Testbench for CAN_Frame module
@@ -64,4 +64,4 @@ module CAN_Frame_tb;
 
   
 
-endmodule '
+endmodule </pre>
