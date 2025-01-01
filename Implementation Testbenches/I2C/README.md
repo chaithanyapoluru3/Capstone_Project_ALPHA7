@@ -1,4 +1,4 @@
-''' `timescale 1ns / 1ps
+<pre> `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -60,4 +60,4 @@ module tbmast;
    // Generate clock signal
     always
         #1 clk = ~clk; // Toggle clock every 1 time unit
-endmodule
+endmodule </pre>
