@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+<pre> `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -58,4 +58,4 @@ module spi_slave (
             miso <= data_in[7 - count];  // Send bit to master
         end
     end
-endmodule
+endmodule </pre>
