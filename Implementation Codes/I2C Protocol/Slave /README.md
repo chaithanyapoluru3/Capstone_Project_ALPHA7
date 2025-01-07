@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+<pre> `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -69,4 +69,4 @@ module slave(
   // Output the value from the storage
         out = storage[add];
     end
-endmodule
+endmodule </pre>
