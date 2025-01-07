@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+<pre> `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -72,4 +72,4 @@ module spi_master (
             data_out <= mem;         // Transfer received data to output
         end
     end
-endmodule
+endmodule </pre>
