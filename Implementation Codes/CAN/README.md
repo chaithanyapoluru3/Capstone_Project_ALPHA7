@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+<pre>`timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -215,7 +215,7 @@ always @(*) begin
 end
 
 endmodule
-        
+        </pre>
         
         
        
