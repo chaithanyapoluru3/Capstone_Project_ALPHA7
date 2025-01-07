@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+<pre>`timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -112,4 +112,4 @@ end
 // Instantiate the slave module
 slave slv(data, sda, scl);
 
-endmodule
+endmodule </pre>
