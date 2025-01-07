@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+<pre> `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -72,4 +72,4 @@ module spi_master_slave_tb;
         .data_out(slave_data_out)  // Data received from master
     );
 
-endmodule
+endmodule </pre>
