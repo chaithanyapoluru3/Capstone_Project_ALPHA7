@@ -72,6 +72,28 @@ Controller Area Network, in short CAN protocol is a serial communication protoco
 <br> •	The payload is protected by a checksum using a cyclic redundancy check (CRC) which is ended by a delimiter bit. Based on the results of the CRC, the receivers acknowledge positively or negatively in the ACK slot (acknowledgement) which also is followed by a delimiter bit.
 <br> •	After this the transmission of a data frame is terminated by seven recessive bits (End Of Frame — EOF).
 
+## PROTOCOL 4: UART(Universal Asynchronous Receiver/Transmitter)
+It’s not a communication protocol like SPI and I2C, but a physical circuit in a microcontroller, or a stand-alone IC. A UART’s main purpose is to transmit and receive serial data.​
+<br> One of the best things about UART is that it only uses two wires to transmit data between devices.​
+<br> In UART communication, two UARTs communicate directly with each other. The transmitting UART converts parallel data from a controlling device like a CPU into serial form, transmits it in serial to the receiving UART, which then converts the serial data back into parallel data for the receiving device. Only two wires are needed to transmit data between two UARTs. Data flows from the Tx pin of the transmitting UART to the Rx pin of the receiving UART:​
+  ![image](https://github.com/user-attachments/assets/728bcd8e-9f9c-4e86-b342-3ae290312d8d)
+
+  <br> UARTs transmit data asynchronously, which means there is no clock signal to synchronize the output of bits from the transmitting UART to the sampling of bits by the receiving UART. Instead of a clock signal, the transmitting UART adds start and stop bits to the data packet being transferred. ​
+<br> When the receiving UART detects a start bit, it starts to read the incoming bits at a specific frequency known as the baud rate. ​
+<br> Baud rate is a measure of the speed of data transfer, expressed in bits per second (bps). Both UARTs must operate at about the same baud rate. The baud rate between the transmitting and receiving UARTs can only differ by about 10% before the timing of bits gets too far off.​
+<br> Both UARTs must also must be configured to transmit and receive the same data packet structure.​
+<br> step1: ![image](https://github.com/user-attachments/assets/ab943bbb-6e5f-43f3-9243-d403b29809a5)
+<br> Step2: ![image](https://github.com/user-attachments/assets/837509bc-83f7-41e3-b857-3b914dc5424f)
+<br> Step3: ![image](https://github.com/user-attachments/assets/4d619278-3d70-431c-ad84-084d0504095c)
+<br> Step4: ![image](https://github.com/user-attachments/assets/a5706ce0-f3c4-4ef9-9fe2-b58e4793554c)
+
+
+
+
+ 
+
+
+
 
 
 
