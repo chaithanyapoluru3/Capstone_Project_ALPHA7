@@ -1,6 +1,6 @@
 # Capstone_Project_ALPHA7
 
-# Implementation and Functional Verification of Communication Protocols using FPGA 
+# Implementation and Functional Verification of Communication Protocols 
 
 # Introduction
 In embedded systems, communication between devices is crucial for data transfer, synchronization, and control. This project focuses on three widely-used communication protocols: CAN (Controller Area Network), I2C (Inter-Integrated Circuit), and SPI (Serial Peripheral Interface).
