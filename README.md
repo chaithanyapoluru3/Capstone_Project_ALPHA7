@@ -88,6 +88,15 @@ It’s not a communication protocol like SPI and I2C, but a physical circuit in 
 <br> Step4: ![image](https://github.com/user-attachments/assets/a5706ce0-f3c4-4ef9-9fe2-b58e4793554c)
 
 
+## PROTOCOL 5: FlexRay Protocol
+FlexRay is an automotive network communications protocol developed through the FlexRay Consortium to govern on-board automotive computing.
+<br> FlexRay supports high data rates, up to 10 Mbit/s, explicitly supports both star and party line bus topologies, and it consist of two independent data channels for fault-tolerance.The bus operates on a time cycle, divided into two parts: the static segment and the dynamic segment. The static segment is pre-allocated into slices for individual communication types, providing a stronger real-time guarantee than its predecessor CAN. The dynamic segment operates more like CAN, with nodes taking control of the bus as available, allowing event-triggered behavior.
+####  FlexRay Frame Format
+![WhatsApp Image 2025-02-19 at 14 19 37_a6b06379](https://github.com/user-attachments/assets/baf4b67e-27fa-4af3-b2cc-fc0d01124157)
+An overview of the general FlexRay frame format is illustrated in above fig. The FlexRay frame format divides into three segments: Header, Payload, and Trailer.
+
+
+
 
 
  
