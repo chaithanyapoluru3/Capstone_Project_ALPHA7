@@ -76,6 +76,7 @@ Controller Area Network, in short CAN protocol is a serial communication protoco
 It’s not a communication protocol like SPI and I2C, but a physical circuit in a microcontroller, or a stand-alone IC. A UART’s main purpose is to transmit and receive serial data.​
 <br> One of the best things about UART is that it only uses two wires to transmit data between devices.​
 <br> In UART communication, two UARTs communicate directly with each other. The transmitting UART converts parallel data from a controlling device like a CPU into serial form, transmits it in serial to the receiving UART, which then converts the serial data back into parallel data for the receiving device. Only two wires are needed to transmit data between two UARTs. Data flows from the Tx pin of the transmitting UART to the Rx pin of the receiving UART:​
+
   ![image](https://github.com/user-attachments/assets/728bcd8e-9f9c-4e86-b342-3ae290312d8d)
 
   <br> UARTs transmit data asynchronously, which means there is no clock signal to synchronize the output of bits from the transmitting UART to the sampling of bits by the receiving UART. Instead of a clock signal, the transmitting UART adds start and stop bits to the data packet being transferred. ​
